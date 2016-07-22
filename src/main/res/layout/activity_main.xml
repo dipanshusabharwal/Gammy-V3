@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.admin.gammy.MainActivity"
+    android:id="@+id/mainRl">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:id="@+id/connectBtn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:enabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disconnect"
+        android:id="@+id/disconnectBtn"
+        android:layout_alignBottom="@+id/connectBtn"
+        android:layout_toRightOf="@+id/connectBtn"
+        android:layout_toEndOf="@+id/connectBtn"
+        android:clickable="true"
+        android:enabled="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publish"
+        android:id="@+id/publishBtn"
+        android:clickable="true"
+        android:enabled="false"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/disconnectBtn"
+        android:layout_toEndOf="@+id/disconnectBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unpublish"
+        android:id="@+id/unpublishBtn"
+        android:clickable="true"
+        android:enabled="false"
+        android:layout_below="@+id/connectBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unsubscribe"
+        android:id="@+id/unsubscribeBtn"
+        android:clickable="true"
+        android:enabled="false"
+        android:layout_alignTop="@+id/unpublishBtn"
+        android:layout_toRightOf="@+id/unpublishBtn"
+        android:layout_toEndOf="@+id/unpublishBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toggle Camera"
+        android:id="@+id/cameraToggleBtn"
+        android:layout_alignTop="@+id/unsubscribeBtn"
+        android:layout_toRightOf="@+id/unsubscribeBtn"
+        android:layout_toEndOf="@+id/unsubscribeBtn"
+        android:clickable="true"
+        android:enabled="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Archive"
+        android:id="@+id/startArchiveBtn"
+        android:clickable="true"
+        android:enabled="false"
+        android:layout_below="@+id/unpublishBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Archive"
+        android:id="@+id/stopArchiveBtn"
+        android:clickable="true"
+        android:enabled="false"
+        android:layout_alignTop="@+id/startArchiveBtn"
+        android:layout_toRightOf="@+id/startArchiveBtn"
+        android:layout_toEndOf="@+id/startArchiveBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat"
+        android:id="@+id/chatBtn"
+        android:clickable="true"
+        android:enabled="false"
+        android:layout_below="@+id/unsubscribeBtn"
+        android:layout_toRightOf="@+id/stopArchiveBtn"
+        android:layout_toEndOf="@+id/stopArchiveBtn" />
+
+    <RelativeLayout
+        android:id="@+id/publisherRl"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/startArchiveBtn"
+        android:keepScreenOn="true"/>
+
+    <RelativeLayout
+        android:id="@+id/subscriberRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/publisherRl"
+        android:gravity="center_horizontal"
+        android:keepScreenOn="true"/>
+</RelativeLayout>
